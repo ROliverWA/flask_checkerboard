@@ -1,0 +1,19 @@
+.wrapper {
+    height: 1000px;
+    width: 1000px;
+}
+
+
+table tr td {
+    height: 50px;
+    width: 50px;
+    
+}
+
+.color1 {
+    background-color: black
+}
+
+.color2 {
+    background-color: red
+}

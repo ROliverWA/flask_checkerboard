@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/main.js')}}"></script>
+    <style>
+        .color1{
+            background-color: {{color1}};
+        }
+        .color2{
+            background-color: {{color2}};
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id='wrapper'>
+       <table>
+           {% for x in range(rows): %}
+                <tr>
+                    {% for y in range(cols): %}
+                    <td class='color{{ (x+y)%2+1}}'></td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
